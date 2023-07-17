@@ -1,13 +1,808 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сити Сервис</title>
+    <link rel="stylesheet" href="./libs/css/swiper.css" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./libs/js/swiper.js"></script>
+    <script defer src="./js/index.js"></script>
 </head>
-<body>
-    <header class="">
 
+<body>
+    <header class="header__container">
+        <div class="container header">
+            <div class="header__top">
+                <button id="burger" class="header__burger nav-toggle" aria-label="Меню">
+                    <span class="bar-top"></span>
+                    <span class="bar-mid"></span>
+                    <span class="bar-bot"></span>
+                </button>
+                <a class="header__logo__link" href="/">
+                    <img class="header__logo" src="./img/icons/logo.svg" alt="Логотип Сити Сервис">
+                </a>
+                <div class="header__info__container">
+                    <div class="header__city">
+                        Нижневартовск
+                        <button class="select__city">
+                            Все города
+                        </button>
+                    </div>
+                    <div class="header__phone__container">
+                        <a class="header__phone" href="tel:+78003022137">
+                            8 800 302 21 37
+                        </a>
+                        <a href="tel:+78003022137" class="header__call">
+                            Заказать звонок
+                        </a>
+                    </div>
+                </div>
+                <a href="tel:+78003022137" class="mobile__phone"></a>
+            </div>
+            <nav class="header__nav js-mobile">
+                <ul class="header__list">
+                    <li class="header__item  header__item-dropdown">
+                        <a href="#" class="header__link ">
+                            Клининговые услуги
+                        </a>
+                        <div class="header__expand">
+                            <div class="header__expand-layout">
+                                <ul class="header__dropdown">
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Мойка окон и фасадов зданий
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Ежедневная уборка
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Комплексная уборка помещений
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Генеральная уборка для бизнеса
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Уборка после ремонта
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Уборка прилегающей территории
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Полировка (натирка) твердых полов
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Роторная чистка твердых полов
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Уборка снега
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Очистка крыш
+                                            от снега и сосулек
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Покос травы
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Чистка эскалаторов и траволаторов
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="#">
+                            Цены
+                        </a>
+                    </li>
+                    <li class="header__item  header__item-dropdown">
+                        <a href="#" class="header__link ">О компании</a>
+                        <div class="header__expand">
+                            <div class="header__expand-layout">
+                                <ul class="header__dropdown">
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Мойка окон и фасадов зданий
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Ежедневная уборка
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item  header__item-dropdown">
+                        <a href="#" class="header__link ">Подбор персонала</a>
+                        <div class="header__expand">
+                            <div class="header__expand-layout">
+                                <ul class="header__dropdown">
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Мойка окон и фасадов зданий
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Ежедневная уборка
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="#">
+                            Акции
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="#">
+                            Интернет-магазин
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="dropdown__menu js-menu-container">
+
+        </div>
     </header>
+    <!--  <section class="hero">
+        <div class="container">
+            <h1 class="title hero__title">
+                Клининговые услуги
+                <span class="title__span">
+                    для корпоративных клиентов
+                </span>
+            </h1>
+            <p class="herp__description">
+                Оказываем услуги клининга корпоративным клиентам с 2008 года
+            </p>
+            <div class="hero__btns">
+                <a href="#" class="button">
+                    Рассчет стоимости
+                </a>
+                <a href="#" class="button">
+                    Пригласить на тендер
+                </a>
+            </div>
+            <div class="hero__advantages">
+                <div class="advantages__item">
+                    <h3 class="title title__advantages experience">
+                        19 ЛЕТ ОПЫТА
+                    </h3>
+                    <p>
+                        успешной работы в сфере клининга
+                    </p>
+                </div>
+                <div class="advantages__item">
+                    <h3 class="title title__advantages companys">
+                        300+ компаний
+                    </h3>
+                    <p>
+                        на ежедневном обслуживании
+                    </p>
+                </div>
+                <div class="advantages__item">
+                    <h3 class="title title__advantages cleanings">
+                        800+ клинингов
+                    </h3>
+                    <p>
+                        с площадью уборки от 1000 до 100 000 м2
+                    </p>
+                </div>
+                <div class="advantages__item">
+                    <h3 class="title title__advantages services">
+                        30+ ВИДОВ УСЛУГ
+                    </h3>
+                    <p>
+                        от мытья окон
+                        до уборки цехов
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section class="container services">
+        <h2 class="title title__services">
+            Клининговые услуги
+            <span class="title__span">
+                для корпоративных клиентов —
+            </span>
+        </h2>
+        <div class="services__container">
+            <a href="#" class="services__link">
+                <img src="" alt="Мойка окон и фасадов">
+                <h3 class="services__head">
+                    Мойка окон и фасадов
+                </h3>
+                <span>
+                    от 35 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Ежедневная уборка помещений">
+                <h3 class="services__head">
+                    Ежедневная уборка помещений
+                </h3>
+                <span>
+                    от 30 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Комплексная уборка помещений">
+                <h3 class="services__head">
+                    Комплексная уборка помещений
+                </h3>
+                <span>
+                    от 30 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Генеральная уборка для бизнеса">
+                <h3 class="services__head">
+                    Генеральная уборка для бизнеса
+                </h3>
+                <span>
+                    от 30 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Уборка после ремонта">
+                <h3 class="services__head">
+                    Уборка после ремонта
+                </h3>
+                <span>
+                    от 35 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Уборка после ремонта">
+                <h3 class="services__head">
+                    Уборка после ремонта
+                </h3>
+                <span>
+                    от 35 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Уборка прилегающей территории">
+                <h3 class="services__head">
+                    Уборка прилегающей территории
+                </h3>
+                <span>
+                    от 30 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Полировка (натирка) твердых полов">
+                <h3 class="services__head">
+                    Полировка (натирка) твердых полов
+                </h3>
+                <span>
+                    от 30 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Роторная чистка твердых полов">
+                <h3 class="services__head">
+                    Роторная чистка твердых полов
+                </h3>
+                <span>
+                    от 30 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Уборка снега">
+                <h3 class="services__head">
+                    Уборка снега
+                </h3>
+                <span>
+                    от 35 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Очистка крыш
+                от снега и сосулек">
+                <h3 class="services__head">
+                    Очистка крыш
+                    от снега и сосулек
+                </h3>
+                <span>
+                    от 35 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Покос травы">
+                <h3 class="services__head">
+                    Покос травы
+                </h3>
+                <span>
+                    от 35 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link">
+                <img src="" alt="Чистка эскалаторов и траволаторов">
+                <h3 class="services__head">
+                    Чистка эскалаторов и траволаторов
+                </h3>
+                <span>
+                    от 35 ₽/м2
+                </span>
+            </a>
+            <a href="#" class="services__link--last">
+                <h3 class="services__head--last">
+                    Прайс лист
+                </h3>
+            </a>
+        </div>
+    </section> -->
+    <!-- <section class="tender">
+        <div class="container">
+            <h4 class="tender__head">
+                Пригласить на тендер
+            </h4>
+            <div class="tender__container">
+                <h2 class="title tender__title">
+                    Мы учавствуем
+                    в тендерах с 2008 года
+                    <span class="title__span">
+                        — по 223 и 43 ФЗ
+                    </span>
+                </h2>
+                <div class="tender__info">
+                    <div class="tender__item tender__gos">
+                        <span>
+                            230+
+                        </span>
+                        <p>
+                            гос. тендеров
+                        </p>
+                    </div>
+                    <div class="tender__item tender__coorp">
+                        <span>
+                            120+
+                        </span>
+                        <p>
+                            корп. тендеров
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="button tender__invite">
+                Пригласить на тендер
+            </a>
+        </div>
+    </section> -->
+    <!-- <section class="container tab__slide">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/cleaning_swiper.svg" alt="">
+                    <div class="">
+                        <h2>
+                            Чистота без перебоев
+                        </h2>
+                        <ul>
+                            <li>
+                                Вам не придется вникать в проблемы сломанной техники или заболевшего оператора уборки:
+                            </li>
+                            <li>
+                                У нас налажен ремонт уборочного оборудования и сервис «подменной» техники. Поэтому
+                                сломанный инвентарь заменяется в день обращения;
+                            </li>
+                            <li>
+                                Наши менеджеры на связи даже в выходные
+                                и праздничные дни. Поэтому вопрос о замене сотрудника решается в течение часа;
+                            </li>
+                            <li>
+                                За 14 лет
+                                у нас были самые разные объекты, от 30 до 100 000 м2.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/cleaning_swiper.svg" alt="">
+                    <div class="">
+                        <h2>
+                            Слайд 2
+                        </h2>
+                        <ul>
+                            <li>
+                                Вам не придется вникать в проблемы сломанной техники или заболевшего оператора уборки:
+                            </li>
+                            <li>
+                                У нас налажен ремонт уборочного оборудования и сервис «подменной» техники. Поэтому
+                                сломанный инвентарь заменяется в день обращения;
+                            </li>
+                            <li>
+                                Наши менеджеры на связи даже в выходные
+                                и праздничные дни. Поэтому вопрос о замене сотрудника решается в течение часа;
+                            </li>
+                            <li>
+                                За 14 лет
+                                у нас были самые разные объекты, от 30 до 100 000 м2.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/cleaning_swiper.svg" alt="">
+                    <div class="">
+                        <h2>
+                            Слайд 3
+                        </h2>
+                        <ul>
+                            <li>
+                                Вам не придется вникать в проблемы сломанной техники или заболевшего оператора уборки:
+                            </li>
+                            <li>
+                                У нас налажен ремонт уборочного оборудования и сервис «подменной» техники. Поэтому
+                                сломанный инвентарь заменяется в день обращения;
+                            </li>
+                            <li>
+                                Наши менеджеры на связи даже в выходные
+                                и праздничные дни. Поэтому вопрос о замене сотрудника решается в течение часа;
+                            </li>
+                            <li>
+                                За 14 лет
+                                у нас были самые разные объекты, от 30 до 100 000 м2.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/cleaning_swiper.svg" alt="">
+                    <div class="">
+                        <h2>
+                            Слайд 4
+                        </h2>
+                        <ul>
+                            <li>
+                                Вам не придется вникать в проблемы сломанной техники или заболевшего оператора уборки:
+                            </li>
+                            <li>
+                                У нас налажен ремонт уборочного оборудования и сервис «подменной» техники. Поэтому
+                                сломанный инвентарь заменяется в день обращения;
+                            </li>
+                            <li>
+                                Наши менеджеры на связи даже в выходные
+                                и праздничные дни. Поэтому вопрос о замене сотрудника решается в течение часа;
+                            </li>
+                            <li>
+                                За 14 лет
+                                у нас были самые разные объекты, от 30 до 100 000 м2.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <p class="append-buttons">
+            <a href="#" class="slide-1">Чистота без перебоев</a>
+            <a href="#" class="slide-2">Экономия 40%</a>
+            <a href="#" class="slide-3">Оснащение за 1 день</a>
+            <a href="#" class="slide-4">Выезд технологов</a>
+        </p>
+    </section> -->
+    <!-- <section class="equipment">
+        <div class="container">
+            <h2 class="title equipment__title">
+                Профессиональное оборудование
+                <span class="title__span">
+                    и инвентарь для клининга —
+                </span>
+            </h2>
+            <p>
+                Мы являемся сертифицированными дилерами ведущих мировых производителей уборочной техники, инвентаря,
+                моющих средств и средств гигиены
+            </p>
+            <div class="equipment__category__btns">
+                <button class="equipment__btn">
+                    Техника
+                </button>
+                <button class="equipment__btn">
+                    Инвентарь
+                </button>
+                <button class="equipment__btn">
+                    Химия
+                </button>
+            </div>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="equipment__border">
+                        <img src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
+                    </div>
+                    <h3>
+                        Поломоечная машина BD 50/60
+                    </h3>
+                </div>
+                <div class="swiper-slide">
+                    <div class="equipment__border">
+                        <img src="./img/equipment_2.png" alt="Поломоечная машина BD 50/50">
+                    </div>
+                    <h3>
+                        Поломоечная машина BD 50/50
+                    </h3>
+                </div>
+                <div class="swiper-slide">
+                    <div class="equipment__border">
+                        <img src="./img/equipment_3.png" alt="Поломоечная машина BD 50/70">
+                    </div>
+                    <h3>
+                        Поломоечная машина BD 50/70
+                    </h3>
+                </div>
+                <div class="swiper-slide">
+                    <div class="equipment__border">
+                        <img src="./img/equipment_4.png" alt="Поломоечная машина B 150">
+                    </div>
+                    <h3>
+                        Поломоечная машина B 150
+                    </h3>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <a href="#" class="">
+            Все оборудование
+        </a>
+    </section> -->
+    <!-- <section class="reviews">
+        <h2 class="container">
+            Наши клиенты и
+            <span class="title__span">
+                отзывы —
+            </span>
+        </h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="reviews__container">
+            <div class="reviews__item">
+                <div class="reviews__top">
+                    <div class="reviews__title">
+                        <span>
+                            ИП Иванов Б. И.
+                        </span>
+                        <span>
+                            Услуга - Уборка офисов
+                        </span>
+                        <span>
+                            «Рады сотрудничеству»
+                        </span>
+                    </div>
+                    <div class="reviews__img">
+                        <img src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
+                    </div>
+                </div>
+                <p>
+                    До пришествия компании Сити Сервис в наш офис уборка небольших помещений лежала на приходящей
+                    женщине, которая, честно говоря, далеко не всегда скрупулезно относилась к своим обязанностями. Шеф
+                    решил, что мы должны быть в тренде, жить и расходовать средства рационально, использовать аутсорсинг
+                    и приходящих работников. Обратили внимание на высокий рейтинг компании Сити Сервис и заказали
+                    пробную уборку офиса. А потом еще раз, и еще одну генеральную.
+                </p>
+            </div>
+        </div>
+        <a href="#" class="button eviews__button">
+            Все отзывы
+        </a>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section> -->
+    <!-- <section class="container about">
+        <h2 class="title about__title">
+            Клининговая Компания «Сити Сервис»
+            <span class="title__span">
+                — ваш эксперт по чистоте в Нижневартовске
+            </span>
+        </h2>
+        <div class="about__content">
+            <ul>
+                <li>
+                    14 лет назад в Сургуте мы были первыми, кто предложил услуги клининга. Сегодня КК «Сити Сервис»
+                    считается одной из самых надежных и опытных среди крупнейших клининговых компаний ХМАО и ЯНАО.
+                </li>
+                <li>
+                    Работаем с заказами любой сложности. От офисов, торговых павильонов до крупнейших градообразующих
+                    предприятий с площадью ежедневных уборочных работ свыше 100 000 м2.
+                </li>
+                <li>
+                    За 14 лет деятельности мы ни разу не подвели заказчика. Все уборочные работы – всегда на высшем
+                    уровне и точно в срок.
+                </li>
+                <div class="about__invisible">
+                    <li>
+                        14 лет назад в Сургуте мы были первыми, кто предложил услуги клининга. Сегодня КК «Сити Сервис»
+                        считается одной из самых надежных и опытных среди крупнейших клининговых компаний ХМАО и ЯНАО.
+                    </li>
+                    <li>
+                        Работаем с заказами любой сложности. От офисов, торговых павильонов до крупнейших
+                        градообразующих
+                        предприятий с площадью ежедневных уборочных работ свыше 100 000 м2.
+                    </li>
+                    <li>
+                        За 14 лет деятельности мы ни разу не подвели заказчика. Все уборочные работы – всегда на высшем
+                        уровне и точно в срок.
+                    </li>
+                </div>
+            </ul>
+            <button class="about__show">
+                Показать подробности
+            </button>
+            <a href="#" class="button about__link">
+                О компании
+            </a>
+        </div>
+    </section> -->
+    <!-- <section class="feedback">
+        <h2 class="title feedback__title">
+            Оставьте заявку и
+            <span class="title__span">
+                получите КП
+            </span>
+            на постоянное обслуживание со скидкой!
+        </h2>
+        <p>
+            После получения заявки, менеджер компании обязательно свяжется с Вами для уточнения заказа.
+        </p>
+        <form class="feedbackk__form">
+            <div class="">
+                <input type="text">
+                <input type="text">
+            </div>
+            <textarea name="" cols="30" rows="10" placeholder="Что нужно сделать?">
+
+            </textarea>
+            <div>
+                <button type="submit">
+                    Отправить заявку
+                </button>
+                <p>
+                    Нажимая на кнопку вы даете согласие на
+                    <a href="#">
+                        обработку ваших персональных данных
+                    </a>
+                </p>
+            </div>
+        </form>
+    </section> -->
+    <!-- <footer class="footer">
+        <div class="footer__top">
+            <div>
+                <a href="/">
+                    <img src="./img/icons/logo.svg" alt="Логотип Сити Сервис">
+                </a>
+                <span>
+                    Главный офис
+                </span>
+                <address>
+                    г. Сургут, ул. 30 лет Победы, 19, офис 207А
+                </address>
+            </div>
+            <nav class="footer__nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Клининговые услуги
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Цены
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            О компании
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Подбор персонала
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Акции
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Интернет-магазин
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__contacts">
+            <a href="tel:+78003022137">
+                8 800 302 21 37
+            </a>
+            <a href="mailto:info@uborka-hmao.ru">
+                info@uborka-hmao.ru
+            </a>
+            <span>
+                Сургут
+            </span>
+            <a href="tel:+7 3462 550 221">
+                +7 3462 550 221
+            </a>
+            <span>
+                Нижневартовск
+            </span>
+            <a href="tel:+7 3462 550 221">
+                +7 3462 550 221
+            </a>
+        </div>
+        <hr>
+        <div class="footer__bottom">
+            <p>
+                2023. Сити Сервис. Все права защищены.
+            </p>
+            <a href="#">
+                Политика обработки персональных данных
+            </a>
+        </div>
+    </footer> -->
 </body>
+
 </html>
