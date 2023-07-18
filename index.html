@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сити Сервис</title>
-    <link rel="stylesheet" href="./libs/css/swiper.css" />
+    <link rel="stylesheet" href="./libs/css/swiper.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script defer src="./libs/js/swiper.js"></script>
     <script defer src="./js/index.js"></script>
@@ -15,7 +15,7 @@
     <header class="header__container">
         <div class="container header">
             <div class="header__top">
-                <button id="burger" class="header__burger nav-toggle" aria-label="Меню">
+                <button class="header__burger burger__toggle nav-toggle" aria-label="Меню">
                     <span class="bar-top"></span>
                     <span class="bar-mid"></span>
                     <span class="bar-bot"></span>
@@ -24,8 +24,10 @@
                     <img class="header__logo" src="./img/icons/logo.svg" alt="Логотип Сити Сервис">
                 </a>
                 <div class="header__info__container">
-                    <div class="header__city">
-                        Нижневартовск
+                    <div class="header__city__container">
+                        <div class="header__city">
+                            Нижневартовск
+                        </div>
                         <button class="select__city">
                             Все города
                         </button>
@@ -44,9 +46,12 @@
             <nav class="header__nav js-mobile">
                 <ul class="header__list">
                     <li class="header__item  header__item-dropdown">
-                        <a href="#" class="header__link ">
-                            Клининговые услуги
-                        </a>
+                        <div class="menu__rectangle__container">
+                            <a href="#" class="header__link ">
+                                Клининговые услуги
+                            </a>
+                            <button class="menu__arrow"></button>
+                        </div>
                         <div class="header__expand">
                             <div class="header__expand-layout">
                                 <ul class="header__dropdown">
@@ -121,7 +126,12 @@
                         </a>
                     </li>
                     <li class="header__item  header__item-dropdown">
-                        <a href="#" class="header__link ">О компании</a>
+                        <div class="menu__rectangle__container">
+                            <a href="#" class="header__link ">
+                                О компании
+                            </a>
+                            <button class="menu__arrow"></button>
+                        </div>
                         <div class="header__expand">
                             <div class="header__expand-layout">
                                 <ul class="header__dropdown">
@@ -140,7 +150,10 @@
                         </div>
                     </li>
                     <li class="header__item  header__item-dropdown">
-                        <a href="#" class="header__link ">Подбор персонала</a>
+                        <div class="menu__rectangle__container">
+                            <a href="#" class="header__link ">Подбор персонала</a>
+                            <button class="menu__arrow"></button>
+                        </div>
                         <div class="header__expand">
                             <div class="header__expand-layout">
                                 <ul class="header__dropdown">
@@ -177,25 +190,29 @@
             </nav>
         </div>
         <div class="dropdown__menu js-menu-container">
-
+            <div class="dropdown__contacts"></div>
+            <div class="mobile__menu"></div>
+            <div class="mobile__background">
+                <img src="./img/main_banner.svg" alt="">
+            </div>
         </div>
     </header>
-    <!--  <section class="hero">
-        <div class="container">
+    <section class="hero">
+        <div class="container hero__container">
             <h1 class="title hero__title">
                 Клининговые услуги
                 <span class="title__span">
                     для корпоративных клиентов
                 </span>
             </h1>
-            <p class="herp__description">
+            <p class="hero__description">
                 Оказываем услуги клининга корпоративным клиентам с 2008 года
             </p>
             <div class="hero__btns">
                 <a href="#" class="button">
                     Рассчет стоимости
                 </a>
-                <a href="#" class="button">
+                <a href="#" class="button tender__invite">
                     Пригласить на тендер
                 </a>
             </div>
@@ -235,7 +252,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- <section class="container services">
         <h2 class="title title__services">
             Клининговые услуги
@@ -664,7 +681,7 @@
                     За 14 лет деятельности мы ни разу не подвели заказчика. Все уборочные работы – всегда на высшем
                     уровне и точно в срок.
                 </li>
-                <div class="about__invisible">
+                <span class="about__invisible">
                     <li>
                         14 лет назад в Сургуте мы были первыми, кто предложил услуги клининга. Сегодня КК «Сити Сервис»
                         считается одной из самых надежных и опытных среди крупнейших клининговых компаний ХМАО и ЯНАО.
@@ -678,7 +695,7 @@
                         За 14 лет деятельности мы ни разу не подвели заказчика. Все уборочные работы – всегда на высшем
                         уровне и точно в срок.
                     </li>
-                </div>
+                </span>
             </ul>
             <button class="about__show">
                 Показать подробности
@@ -720,21 +737,21 @@
             </div>
         </form>
     </section> -->
-    <!-- <footer class="footer">
-        <div class="footer__top">
-            <div>
-                <a href="/">
+    <footer class="footer">
+        <div class="container footer__top">
+            <div class="footer__address__container">
+                <a class="footer__logo" href="/">
                     <img src="./img/icons/logo.svg" alt="Логотип Сити Сервис">
                 </a>
-                <span>
+                <span class="footer__text">
                     Главный офис
                 </span>
-                <address>
+                <address class="footer__address">
                     г. Сургут, ул. 30 лет Победы, 19, офис 207А
                 </address>
             </div>
             <nav class="footer__nav">
-                <ul>
+                <ul class="footer__list">
                     <li>
                         <a href="#">
                             Клининговые услуги
@@ -772,29 +789,29 @@
                     </li>
                 </ul>
             </nav>
-        </div>
-        <div class="footer__contacts">
-            <a href="tel:+78003022137">
-                8 800 302 21 37
-            </a>
-            <a href="mailto:info@uborka-hmao.ru">
-                info@uborka-hmao.ru
-            </a>
-            <span>
-                Сургут
-            </span>
-            <a href="tel:+7 3462 550 221">
-                +7 3462 550 221
-            </a>
-            <span>
-                Нижневартовск
-            </span>
-            <a href="tel:+7 3462 550 221">
-                +7 3462 550 221
-            </a>
+            <div class="footer__contacts">
+                <a class="footer__main__phone" href="tel:+78003022137">
+                    8 800 302 21 37
+                </a>
+                <a class="footer__email" href="mailto:info@uborka-hmao.ru">
+                    info@uborka-hmao.ru
+                </a>
+                <span class="footer__city">
+                    Сургут
+                </span>
+                <a class="footer__phone" href="tel:+73462550221">
+                    +7 3462 550 221
+                </a>
+                <span class="footer__city">
+                    Нижневартовск
+                </span>
+                <a class="footer__phone" href="tel:+73462550221">
+                    +7 3462 550 221
+                </a>
+            </div>
         </div>
         <hr>
-        <div class="footer__bottom">
+        <div class="container footer__bottom">
             <p>
                 2023. Сити Сервис. Все права защищены.
             </p>
@@ -802,7 +819,36 @@
                 Политика обработки персональных данных
             </a>
         </div>
-    </footer> -->
+    </footer>
+    <div class="fixed__menu">
+        <ul class="fixed__menu__list">
+            <li>
+                <button class="fixed__menu__item fixed__burger burger__toggle nav-toggle" aria-label="Меню">
+                    <div>
+                        <span class="bar-top"></span>
+                        <span class="bar-mid"></span>
+                        <span class="bar-bot"></span>
+                    </div>
+                    Меню
+                </button>
+            </li>
+            <li>
+                <a class="fixed__menu__item fixed__phone" href="tel:+78003022137">
+                    Позвонить
+                </a>
+            </li>
+            <li>
+                <a class="fixed__menu__item fixed__message" href="tel:+78003022137">
+                    Написать
+                </a>
+            </li>
+            <li>
+                <a class="fixed__menu__item fixed__top" href="#">
+                    Наверх
+                </a>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
