@@ -514,14 +514,15 @@
     background-color: var(--hover);
 }
 
-.tender__invite {
+.hero__invite {
     color: var(--main-color);
     border: 1px solid var(--main-color);
     background-color: transparent;
 }
 
-.tender__invite:hover {
+.hero__invite:hover {
     background-color: var(--hover);
+    border: 1px solid var(--hover);
     color: #F2F2F2;
 }
 
@@ -758,6 +759,15 @@
 
 .tender__invite {
     display: inline-block;
+    color: var(--main-color);
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.tender__invite:hover {
+    background-color: var(--hover);
+    border: 1px solid var(--hover);
+    color: #FFF;
 }
 
 .tender__item {
