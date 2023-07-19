@@ -38,55 +38,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* const swiper = new Swiper('.swiper', {
-        slidesPerView: 1,
-        centeredSlides: true,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
-    document
-        .querySelector('.slide-1')
-        .addEventListener('click', function (e) {
-            e.preventDefault();
-            swiper.slideTo(0, 0);
+    if (document.querySelector('.tab__slide__container')) {
+        const cleanSwiper = new Swiper('.tab__slide__container', {
+            slidesPerView: 1,
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.tab__swiper-button-next',
+                prevEl: '.tab__swiper-button-prev',
+            },
         });
 
-    document
-        .querySelector('.slide-2')
-        .addEventListener('click', function (e) {
-            e.preventDefault();
-            swiper.slideTo(1, 0);
+
+        let slideBtns = document.querySelectorAll('.slide__tab ');
+
+        cleanSwiper.on('slideChange', function () {
+            deleteActiveSlide();
+            slideBtns[cleanSwiper.activeIndex].classList.add('active');
         });
 
-    document
-        .querySelector('.slide-3')
-        .addEventListener('click', function (e) {
-            e.preventDefault();
-            swiper.slideTo(2, 0);
-        });
-    document
-        .querySelector('.slide-4')
-        .addEventListener('click', function (e) {
-            e.preventDefault();
-            swiper.slideTo(3, 0);
-        }); */
+        slideBtns.forEach(el => {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                deleteActiveSlide();
+                let numberSlide = el.dataset.slide;
+                cleanSwiper.slideTo(numberSlide, 300);
+                el.classList.add('active');
+            })
+        })
+
+        function deleteActiveSlide() {
+            slideBtns.forEach(el => {
+                el.classList.remove('active');
+            });
+        }
+    }
 
 
 })
