@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./libs/css/swiper.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script defer src="./libs/js/swiper.js"></script>
+    <script defer src="./libs/js/fslightbox.js"></script>
+    <script defer src="./libs/js/inputmask.min.js"></script>
     <script defer src="./js/index.js"></script>
 </head>
 
@@ -256,9 +258,9 @@
     <section class="container services">
         <h2 class="title title__services">
             Клининговые услуги
-            <div class="title__span">
+            <span class="title__span">
                 для корпоративных клиентов —
-            </div>
+            </span>
         </h2>
         <div class="services__container">
             <a href="#" class="services__link">
@@ -423,9 +425,9 @@
                 <h2 class="title tender__title">
                     Мы учавствуем
                     в тендерах с 2008 года
-                    <div class="title__span">
+                    <span class="title__span">
                         — по 223 и 43 ФЗ
-                    </div>
+                    </span>
                 </h2>
                 <a href="#" class="button tender__invite">
                     Пригласить на тендер
@@ -585,107 +587,379 @@
             </p>
         </div>
     </section>
-    <!-- <section class="equipment">
+    <section class="equipment">
         <div class="container">
-            <h2 class="title equipment__title">
+            <h2 class="title equipment__head">
                 Профессиональное оборудование
                 <span class="title__span">
                     и инвентарь для клининга —
                 </span>
             </h2>
-            <p>
+            <p class="equipment__description">
                 Мы являемся сертифицированными дилерами ведущих мировых производителей уборочной техники, инвентаря,
                 моющих средств и средств гигиены
             </p>
             <div class="equipment__category__btns">
-                <button class="equipment__btn">
+                <button data-targetslider="1" class="equipment__btn active">
                     Техника
                 </button>
-                <button class="equipment__btn">
+                <button data-targetslider="2" class="equipment__btn">
                     Инвентарь
                 </button>
-                <button class="equipment__btn">
+                <button data-targetslider="3" class="equipment__btn">
                     Химия
                 </button>
             </div>
         </div>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="equipment__border">
-                        <img src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
+        <div class="technique__swiper__container">
+            <div class="container">
+                <div data-slider="1" class="swiper__tab active">
+                    <div class="technique__swiper technique__swiper_1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/60
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="./img/equipment_2.png" alt="Поломоечная машина BD 50/50">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/50
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="./img/equipment_3.png" alt="Поломоечная машина BD 50/70">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/70
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="./img/equipment_4.png" alt="Поломоечная машина B 150">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина B 150
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="./img/equipment_3.png" alt="Поломоечная машина BD 50/70">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/60
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="./img/equipment_2.png" alt="Поломоечная машина BD 50/50">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/50
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="./img/equipment_3.png" alt="Поломоечная машина BD 50/70">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/70
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="./img/equipment_4.png" alt="Поломоечная машина BD 50/60">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина B 150
+                                </h3>
+                            </div>
+                        </div>
                     </div>
-                    <h3>
-                        Поломоечная машина BD 50/60
-                    </h3>
+                    <div class="technique__swiper-pagination technique__swiper-pagination_1"></div>
+                    <div class="technique__swiper__navigation">
+                        <div class="swiper-button-next technique__swiper-button-next_1"></div>
+                        <div class="swiper-button-prev technique__swiper-button-prev_1"></div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="equipment__border">
-                        <img src="./img/equipment_2.png" alt="Поломоечная машина BD 50/50">
+
+                <div data-slider="2" class="swiper__tab">
+                    <div class="technique__swiper technique__swiper_2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="https://proficlean-dv.ru/d/uborochnyy_invent.jpg"
+                                        alt="Поломоечная машина BD 50/60">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/60
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy"
+                                        src="https://static.insales-cdn.com/images/articles/1/7092/629684/ispolzovanie-uborochnogo-inventarya-v-stomatologicheskoj-klinike.jpg"
+                                        alt="Поломоечная машина BD 50/50">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/50
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="https://chisto.ua/content/article/4/picture-4.jpg"
+                                        alt="Поломоечная машина BD 50/70">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/70
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="https://proficlean-dv.ru/d/uborochnyy_invent.jpg"
+                                        alt="Поломоечная машина BD 50/60">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/60
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy"
+                                        src="https://static.insales-cdn.com/images/articles/1/7092/629684/ispolzovanie-uborochnogo-inventarya-v-stomatologicheskoj-klinike.jpg"
+                                        alt="Поломоечная машина BD 50/50">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/50
+                                </h3>
+                            </div>
+                        </div>
                     </div>
-                    <h3>
-                        Поломоечная машина BD 50/50
-                    </h3>
+                    <div class="technique__swiper-pagination technique__swiper-pagination_2"></div>
+                    <div class="technique__swiper__navigation">
+                        <div class="swiper-button-next technique__swiper-button-next_2"></div>
+                        <div class="swiper-button-prev technique__swiper-button-prev_2"></div>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="equipment__border">
-                        <img src="./img/equipment_3.png" alt="Поломоечная машина BD 50/70">
+
+                <div data-slider="3" class="swiper__tab">
+                    <div class="technique__swiper technique__swiper_3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy"
+                                        src="https://img.freepik.com/free-photo/bright-colorful-cleaning-set-on-a-wooden-table_144627-980.jpg?w=2000"
+                                        alt="Поломоечная машина BD 50/60">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/60
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy"
+                                        src="https://premclass.ru/assets/bootstrap/logo/.th/_thfa1c924e552cbaec21ccf7798c73f0e6.jpg?0623"
+                                        alt="Поломоечная машина BD 50/50">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/50
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy"
+                                        src="https://www.cleannow.ru/forumsfoto/big31493511127-542420140.png"
+                                        alt="Поломоечная машина BD 50/70">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина BD 50/70
+                                </h3>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="equipment__border">
+                                    <img loading="lazy" src="https://proficlean-dv.ru/d/uborochnyy_invent.jpg"
+                                        alt="Поломоечная машина B 150">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <h3 class="equipment__title">
+                                    Поломоечная машина B 150
+                                </h3>
+                            </div>
+                        </div>
                     </div>
-                    <h3>
-                        Поломоечная машина BD 50/70
-                    </h3>
-                </div>
-                <div class="swiper-slide">
-                    <div class="equipment__border">
-                        <img src="./img/equipment_4.png" alt="Поломоечная машина B 150">
+                    <div class="technique__swiper-pagination technique__swiper-pagination_3"></div>
+                    <div class="technique__swiper__navigation">
+                        <div class="swiper-button-next technique__swiper-button-next_3"></div>
+                        <div class="swiper-button-prev technique__swiper-button-prev_3"></div>
                     </div>
-                    <h3>
-                        Поломоечная машина B 150
-                    </h3>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+
+            <a href="#" class="technique__all">
+                Все оборудование
+            </a>
         </div>
-        <a href="#" class="">
-            Все оборудование
-        </a>
-    </section> -->
-    <!-- <section class="reviews">
-        <h2 class="container">
+    </section>
+    <section class="reviews">
+        <h2 class="container title reviews__title">
             Наши клиенты и
             <span class="title__span">
                 отзывы —
             </span>
         </h2>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
+        <div class="swiper__reviews__container">
+            <div class="container">
+                <div class="swiper__reviews">
+                    <div class="swiper-wrapper">
+                        <a data-fslightbox="reviews-lightbox" href="./img/reviews_1.png" class="swiper-slide">
+                            <img loading="lazy" src="./img/reviews_1.png" alt="Поломоечная машина BD 50/60">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                        <a data-fslightbox="reviews-lightbox" href="./img/reviews_2.png" class="swiper-slide">
+                            <img loading="lazy" src="./img/reviews_2.png" alt="Поломоечная машина BD 50/60">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                        <a data-fslightbox="reviews-lightbox" href="./img/reviews_3.png" class="swiper-slide">
+                            <img loading="lazy" src="./img/reviews_3.png" alt="Поломоечная машина BD 50/60">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                        <a data-fslightbox="reviews-lightbox" href="./img/reviews_1.png" class="swiper-slide">
+                            <img loading="lazy" src="./img/reviews_1.png" alt="Поломоечная машина BD 50/60">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                        <a data-fslightbox="reviews-lightbox" href="./img/reviews_2.png" class="swiper-slide">
+                            <img loading="lazy" src="./img/reviews_2.png" alt="Поломоечная машина BD 50/60">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                        <a data-fslightbox="reviews-lightbox" href="./img/reviews_3.png" class="swiper-slide">
+                            <img loading="lazy" src="./img/reviews_3.png" alt="Поломоечная машина BD 50/60">
+                            <div class="swiper-lazy-preloader"></div>
+                        </a>
+                    </div>
                 </div>
+                <div class="technique__swiper-pagination reviews__swiper-pagination"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="reviews__swiper__navigation">
+                <div class="swiper-button-next reviews__swiper-button-next"></div>
+                <div class="swiper-button-prev reviews__swiper-button-prev"></div>
+            </div>
         </div>
-        <div class="reviews__container">
+        <div class="container reviews__container">
             <div class="reviews__item">
                 <div class="reviews__top">
                     <div class="reviews__title">
-                        <span>
+                        <p class="reviews__name">
                             ИП Иванов Б. И.
-                        </span>
-                        <span>
+                        </p>
+                        <p class="reviews__service">
                             Услуга - Уборка офисов
-                        </span>
-                        <span>
+                        </p>
+                        <p class="reviews__description">
                             «Рады сотрудничеству»
-                        </span>
+                        </p>
                     </div>
-                    <div class="reviews__img">
-                        <img src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
-                    </div>
+                    <a data-fslightbox="reviews-text-lightbox" href="./img/reviews_3.png" class="reviews__img">
+                        <img src="./img/reviews_3.png" alt="Поломоечная машина BD 50/60">
+                    </a>
                 </div>
-                <p>
+                <p class="reviews__text">
+                    До пришествия компании Сити Сервис в наш офис уборка небольших помещений лежала на приходящей
+                    женщине, которая, честно говоря, далеко не всегда скрупулезно относилась к своим обязанностями. Шеф
+                    решил, что мы должны быть в тренде, жить и расходовать средства рационально, использовать аутсорсинг
+                    и приходящих работников. Обратили внимание на высокий рейтинг компании Сити Сервис и заказали
+                    пробную уборку офиса. А потом еще раз, и еще одну генеральную.
+                </p>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__top">
+                    <div class="reviews__title">
+                        <p class="reviews__name">
+                            ИП Иванов Б. И.
+                        </p>
+                        <p class="reviews__service">
+                            Услуга - Уборка офисов
+                        </p>
+                        <p class="reviews__description">
+                            «Рады сотрудничеству»
+                        </p>
+                    </div>
+                    <a data-fslightbox="reviews-text-lightbox" href="./img/reviews_2.png" class="reviews__img">
+                        <img src="./img/reviews_2.png" alt="Поломоечная машина BD 50/60">
+                    </a>
+                </div>
+                <p class="reviews__text">
+                    До пришествия компании Сити Сервис в наш офис уборка небольших помещений лежала на приходящей
+                    женщине, которая, честно говоря, далеко не всегда скрупулезно относилась к своим обязанностями. Шеф
+                    решил, что мы должны быть в тренде, жить и расходовать средства рационально, использовать аутсорсинг
+                    и приходящих работников. Обратили внимание на высокий рейтинг компании Сити Сервис и заказали
+                    пробную уборку офиса. А потом еще раз, и еще одну генеральную.
+                </p>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__top">
+                    <div class="reviews__title">
+                        <p class="reviews__name">
+                            ИП Иванов Б. И.
+                        </p>
+                        <p class="reviews__service">
+                            Услуга - Уборка офисов
+                        </p>
+                        <p class="reviews__description">
+                            «Рады сотрудничеству»
+                        </p>
+                    </div>
+                    <a data-fslightbox="reviews-text-lightbox" href="./img/reviews_2.png" class="reviews__img">
+                        <img src="./img/reviews_2.png" alt="Поломоечная машина BD 50/60">
+                    </a>
+                </div>
+                <p class="reviews__text">
+                    До пришествия компании Сити Сервис в наш офис уборка небольших помещений лежала на приходящей
+                    женщине, которая, честно говоря, далеко не всегда скрупулезно относилась к своим обязанностями. Шеф
+                    решил, что мы должны быть в тренде, жить и расходовать средства рационально, использовать аутсорсинг
+                    и приходящих работников. Обратили внимание на высокий рейтинг компании Сити Сервис и заказали
+                    пробную уборку офиса. А потом еще раз, и еще одну генеральную.
+                </p>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__top">
+                    <div class="reviews__title">
+                        <p class="reviews__name">
+                            ИП Иванов Б. И.
+                        </p>
+                        <p class="reviews__service">
+                            Услуга - Уборка офисов
+                        </p>
+                        <p class="reviews__description">
+                            «Рады сотрудничеству»
+                        </p>
+                    </div>
+                    <a data-fslightbox="reviews-text-lightbox" href="./img/reviews_2.png" class="reviews__img">
+                        <img src="./img/reviews_2.png" alt="Поломоечная машина BD 50/60">
+                    </a>
+                </div>
+                <p class="reviews__text">
                     До пришествия компании Сити Сервис в наш офис уборка небольших помещений лежала на приходящей
                     женщине, которая, честно говоря, далеко не всегда скрупулезно относилась к своим обязанностями. Шеф
                     решил, что мы должны быть в тренде, жить и расходовать средства рационально, использовать аутсорсинг
@@ -694,41 +968,68 @@
                 </p>
             </div>
         </div>
-        <a href="#" class="button eviews__button">
+        <a href="#" class="container button reviews__button">
             Все отзывы
         </a>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./img/equipment_1.png" alt="Поломоечная машина BD 50/60">
+        <div class="swiper__parners__container">
+            <div class="container">
+                <div class="swiper__parners">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/surgutneftegaz.png" alt="Логотип Сургутнефтегаз">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/gazprom.png" alt="Логотип Газпром">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/lukoil.png" alt="Логотип Лукойл">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/surgutneftegaz.png" alt="Логотип Сургутнефтегаз">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/gazprom.png" alt="Логотип Газпром">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/lukoil.png" alt="Логотип Лукойл">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/surgutneftegaz.png" alt="Логотип Сургутнефтегаз">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/gazprom.png" alt="Логотип Газпром">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img loading="lazy" src="./img/lukoil.png" alt="Логотип Лукойл">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper__partners__navigation">
+                <div class="swiper-button-next parners__swiper-button-next"></div>
+                <div class="swiper-button-prev parners__swiper-button-prev"></div>
+            </div>
         </div>
-    </section> -->
-    <!-- <section class="container about">
+    </section>
+    <section class="container about">
         <h2 class="title about__title">
             Клининговая Компания «Сити Сервис»
             <span class="title__span">
                 — ваш эксперт по чистоте в Нижневартовске
             </span>
         </h2>
-        <div class="about__content">
-            <ul>
-                <li>
-                    14 лет назад в Сургуте мы были первыми, кто предложил услуги клининга. Сегодня КК «Сити Сервис»
-                    считается одной из самых надежных и опытных среди крупнейших клининговых компаний ХМАО и ЯНАО.
-                </li>
-                <li>
-                    Работаем с заказами любой сложности. От офисов, торговых павильонов до крупнейших градообразующих
-                    предприятий с площадью ежедневных уборочных работ свыше 100 000 м2.
-                </li>
-                <li>
-                    За 14 лет деятельности мы ни разу не подвели заказчика. Все уборочные работы – всегда на высшем
-                    уровне и точно в срок.
-                </li>
-                <span class="about__invisible">
+        <div class="about__picture">
+            <div class="about__content">
+                <ul class="about__list">
                     <li>
                         14 лет назад в Сургуте мы были первыми, кто предложил услуги клининга. Сегодня КК «Сити Сервис»
                         считается одной из самых надежных и опытных среди крупнейших клининговых компаний ХМАО и ЯНАО.
@@ -742,48 +1043,89 @@
                         За 14 лет деятельности мы ни разу не подвели заказчика. Все уборочные работы – всегда на высшем
                         уровне и точно в срок.
                     </li>
-                </span>
-            </ul>
-            <button class="about__show">
-                Показать подробности
-            </button>
-            <a href="#" class="button about__link">
-                О компании
-            </a>
-        </div>
-    </section> -->
-    <!-- <section class="feedback">
-        <h2 class="title feedback__title">
-            Оставьте заявку и
-            <span class="title__span">
-                получите КП
-            </span>
-            на постоянное обслуживание со скидкой!
-        </h2>
-        <p>
-            После получения заявки, менеджер компании обязательно свяжется с Вами для уточнения заказа.
-        </p>
-        <form class="feedbackk__form">
-            <div class="">
-                <input type="text">
-                <input type="text">
-            </div>
-            <textarea name="" cols="30" rows="10" placeholder="Что нужно сделать?">
-
-            </textarea>
-            <div>
-                <button type="submit">
-                    Отправить заявку
+                </ul>
+                <div class="about__invisible">
+                    <ul class="about__list">
+                        <li>
+                            14 лет назад в Сургуте мы были первыми, кто предложил услуги клининга. Сегодня КК «Сити
+                            Сервис»
+                            считается одной из самых надежных и опытных среди крупнейших клининговых компаний ХМАО и
+                            ЯНАО.
+                        </li>
+                        <li>
+                            Работаем с заказами любой сложности. От офисов, торговых павильонов до крупнейших
+                            градообразующих
+                            предприятий с площадью ежедневных уборочных работ свыше 100 000 м2.
+                        </li>
+                        <li>
+                            За 14 лет деятельности мы ни разу не подвели заказчика. Все уборочные работы – всегда на
+                            высшем
+                            уровне и точно в срок.
+                        </li>
+                    </ul>
+                </div>
+                <button class="about__show">
+                    <span>
+                        Показать подробности
+                    </span>
                 </button>
-                <p>
-                    Нажимая на кнопку вы даете согласие на
-                    <a href="#">
-                        обработку ваших персональных данных
-                    </a>
-                </p>
+                <a href="#" class="button about__link">
+                    О компании
+                </a>
             </div>
-        </form>
-    </section> -->
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="container feedback__container">
+            <div class="feedback__content">
+                <h2 class="title feedback__title">
+                    Оставьте заявку и
+                    <span class="title__span">
+                        получите КП
+                    </span>
+                    на постоянное обслуживание со скидкой!
+                </h2>
+                <p class="feedback__text">
+                    После получения заявки, менеджер компании обязательно свяжется с Вами для уточнения заказа.
+                </p>
+                <form id="form" class="feedback__form">
+                    <div class="form__inputs">
+                        <div class="form__input__container">
+                            <label class="input__placeholder" for="name">
+                                Имя или компания <span>*</span>
+                            </label>
+                            <input id="name" class="form__input" name="name" type="text">
+                            <span class="form__error"></span>
+                        </div>
+                        <div class="form__input__container">
+                            <label class="input__placeholder" for="phone">
+                                Телефон <span>*</span>
+                            </label>
+                            <input id="phone" class="form__input" name="phone" type="tel">
+                            <span class="form__error"></span>
+                        </div>
+                    </div>
+                    <div class="form__input__container">
+                        <label class="input__placeholder" for="name">
+                            Что нужно сделать?
+                        </label>
+                        <textarea class="form__textarea form__input" name="what_do"></textarea>
+                    </div>
+                    <div class="form__buttons">
+                        <button class="form__submit" type="submit">
+                            Отправить заявку
+                        </button>
+                        <p class="form__policy">
+                            Нажимая на кнопку вы даете согласие на
+                            <a class="form__policy__link" href="#">
+                                обработку ваших персональных данных
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="container footer__top">
             <div class="footer__address__container">
@@ -867,15 +1209,32 @@
             </a>
         </div>
     </footer>
+    <div class="popup" id="backForm">
+        <div class="popup__container">
+            <div class="popup__text">
+            </div>
+            <button class="popup__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.02846 20.0005C0.765 20.0005 0.501545 19.9003 0.301379 19.6986C-0.10046 19.2968 -0.10046 18.6453 0.301379 18.2435L18.2435 0.301379C18.6453 -0.10046 19.2968 -0.10046 19.6986 0.301379C20.1005 0.703217 20.1005 1.3547 19.6986 1.75679L1.75679 19.6986C1.55511 19.899 1.29166 20.0005 1.02846 20.0005Z"
+                        fill="#2C2D36" />
+                    <path
+                        d="M18.9718 20.0005C18.7083 20.0005 18.4451 19.9003 18.2447 19.6986L0.301379 1.75679C-0.10046 1.3547 -0.10046 0.703217 0.301379 0.301379C0.703217 -0.10046 1.3547 -0.10046 1.75679 0.301379L19.6986 18.2435C20.1005 18.6453 20.1005 19.2968 19.6986 19.6986C19.4969 19.899 19.2337 20.0005 18.9718 20.0005Z"
+                        fill="#2C2D36" />
+                </svg>
+
+            </button>
+        </div>
+    </div>
     <div class="fixed__menu">
         <ul class="fixed__menu__list">
             <li>
                 <button class="fixed__menu__item fixed__burger burger__toggle nav-toggle" aria-label="Меню">
-                    <div>
+                    <span>
                         <span class="bar-top"></span>
                         <span class="bar-mid"></span>
                         <span class="bar-bot"></span>
-                    </div>
+                    </span>
                     Меню
                 </button>
             </li>
