@@ -28,10 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
         mainMenu.remove();
 
 
-        let btnsShowMenu = document.querySelectorAll('.menu__arrow');
+        let btnsShowMenu = document.querySelectorAll('.menu__rectangle__container');
 
         btnsShowMenu.forEach(el => {
-            el.addEventListener('click', () => {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
                 el.closest('.header__item-dropdown').classList.toggle('active');
             })
         })
