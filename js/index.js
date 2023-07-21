@@ -343,15 +343,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let backFormPopup = document.getElementById('backForm');
 
-
     let contactsForm = document.getElementById('form');
 
     let closePopup = document.querySelectorAll('.popup__close');
 
     closePopup.forEach(el => {
         el.addEventListener('click', () => {
-            console.log(el.closest('.popup'))
-            el.closest('.popup').classList.remove('popup_opened');
+            el.closest('.popup').classList.remove('popup__opened');
+        })
+    })
+
+    let popups = document.querySelectorAll('.popup ');
+
+    popups.forEach(el => {
+        el.addEventListener('click', function (e) {
+            if (e.target == el) {
+                el.classList.remove('popup__opened');
+            }
         })
     })
 
@@ -393,16 +401,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then((res) => res.json()).then(result => {
             if (result != 'error') {
                 backFormPopup.classList.add('popup__opened');
-                backFormPopup.querySelector('.popup__text').innerHTML = 'Ваша заявка принята!<br><br>Мы свяжемся с вами в ближайшее время.';
+                backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message">Ваша заявка принята!<br><br>Мы свяжемся с вами в ближайшее время.</div>';
                 inputs.forEach(el => {
                     el.value = '';
                 });
             }
         }).catch((err) => {
             backFormPopup.classList.add('popup__opened')
-            backFormPopup.querySelector('.popup__text').innerHTML = 'Что-то пошло не так!<br><br>Попробуйте снова.';
+            backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message">Что-то пошло не так!<br><br>Попробуйте снова.</div>';
         });
     }
 
+    let callModalCity = document.querySelector('.select__city');
+    let popupSelectCity = document.getElementById('selectCity');
+
+    callModalCity.addEventListener('click', () => {
+        popupSelectCity.classList.add('popup__opened');
+    })
 
 })
