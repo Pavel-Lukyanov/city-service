@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let btnsShowMenu = document.querySelectorAll('.menu__rectangle__container');
 
         btnsShowMenu.forEach(el => {
-            el.addEventListener('click', function(e) {
+            el.addEventListener('click', function (e) {
                 e.preventDefault();
                 el.closest('.header__item-dropdown').classList.toggle('active');
             })
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let backFormPopup = document.getElementById('backForm');
 
-    let contactsForm = document.getElementById('form');
+    let contactsForms = document.querySelectorAll('.feedback__form');
 
     let closePopup = document.querySelectorAll('.popup__close');
 
@@ -364,54 +364,66 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    contactsForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        let ch = 0;
-        inputs.forEach(el => {
-            switch (el.type) {
-                case 'text':
-                    if (el.value.trim().length < 2) {
-                        el.classList.add('error')
-                        el.nextElementSibling.classList.add('active');
-                        el.nextElementSibling.textContent = 'Поле обязательно для заполнения!';
-                    } else {
-                        ch++;
-                    }
-                    break;
-                case 'tel':
-                    if (el.value.includes('_') || el.value == '') {
-                        el.classList.add('error')
-                        el.nextElementSibling.classList.add('active');
-                        el.nextElementSibling.textContent = 'Телефон обязателен для заполнения!';
-                    } else {
-                        ch++;
-                    }
-                    break;
-            }
-        })
+    contactsForms.forEach(form => {
+        const inputs = form.querySelectorAll('input');
+        const backFormPopup = document.querySelector('#backFormPopup');
 
-        if (ch === inputs.length - 1) {
-            sendForm();
-        }
-    })
 
-    function sendForm() {
-        fetch('send.php', {
-            method: 'POST',
-            body: new FormData(contactsForm),
-        }).then((res) => res.json()).then(result => {
-            if (result != 'error') {
-                backFormPopup.classList.add('popup__opened');
-                backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message">Ваша заявка принята!<br><br>Мы свяжемся с вами в ближайшее время.</div>';
-                inputs.forEach(el => {
-                    el.value = '';
-                });
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let ch = 0;
+            inputs.forEach(el => {
+                switch (el.type) {
+                    case 'text':
+                        if (el.value.trim().length < 2) {
+                            el.classList.add('error')
+                            el.nextElementSibling.classList.add('active');
+                            el.nextElementSibling.textContent = 'Поле обязательно для заполнения!';
+                        } else {
+                            ch++;
+                        }
+                        break;
+                    case 'tel':
+                        if (el.value.includes('_') || el.value == '') {
+                            el.classList.add('error')
+                            el.nextElementSibling.classList.add('active');
+                            el.nextElementSibling.textContent = 'Телефон обязателен для заполнения!';
+                        } else {
+                            ch++;
+                        }
+                        break;
+                }
+            })
+
+            if (ch === inputs.length) {
+                fetch('send.php', {
+                    method: 'POST',
+                    body: new FormData(form),
+                })
+                    .then((res) => {
+                        if (!res.ok) {
+                            throw new Error(res.statusText);
+                        }
+                        return res.json();
+                    })
+                    .then(result => {
+                        if (result != 'error') {
+                            backFormPopup.classList.add('popup__opened');
+                            backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message">Ваша заявка принята!<br><br>Мы свяжемся с вами в ближайшее время.</div>';
+                            inputs.forEach(el => {
+                                el.value = '';
+                            });
+                        }
+                    })
+                    .catch((err) => {
+                        backFormPopup.classList.add('popup__opened')
+                        backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message">Что-то пошло не так!<br><br>Попробуйте снова.</div>';
+                    });
             }
-        }).catch((err) => {
-            backFormPopup.classList.add('popup__opened')
-            backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message">Что-то пошло не так!<br><br>Попробуйте снова.</div>';
         });
-    }
+    });
+
+
 
     let callModalCity = document.querySelector('.select__city');
     let popupSelectCity = document.getElementById('selectCity');
@@ -420,4 +432,25 @@ document.addEventListener('DOMContentLoaded', () => {
         popupSelectCity.classList.add('popup__opened');
     })
 
+    let serviceBtnShow = document.querySelector('.description__service__show');
+
+    if (serviceBtnShow) {
+        let serviceInvisible = document.querySelector('.description__service__invisible');
+
+        serviceBtnShow.addEventListener('click', () => {
+            (serviceBtnShow.textContent.trim() === 'Подробнее об услуге') ? serviceBtnShow.innerHTML = '<span>Скрыть</span>' : serviceBtnShow.innerHTML = '<span>Подробнее об услуге</span>';
+            serviceInvisible.classList.toggle('active');
+            serviceBtnShow.classList.toggle('active');
+        })
+    }
+
+    let accordeons = document.querySelectorAll('.accordeon__head');
+
+    if (accordeons.length > 0) {
+        accordeons.forEach(el => {
+            el.addEventListener('click', () => {
+                el.parentNode.classList.toggle('open');
+            })
+        })
+    }
 })
