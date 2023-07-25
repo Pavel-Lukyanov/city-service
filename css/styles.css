@@ -285,7 +285,10 @@ html {
 }
 
 .dropdown__menu {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
     background-color: #FFF;
     width: 100%;
     opacity: 0;
@@ -293,6 +296,11 @@ html {
     transition: 0.3s;
     border-top: 1px solid var(--gray);
     z-index: 2;
+}
+
+.dropdown__menu__overflow {
+    overflow-y: scroll;
+    height: fit-content;
 }
 
 .dropdown__menu.opened {
@@ -2481,7 +2489,15 @@ html {
     line-height: 27px;
 }
 
-.table__td__first b {
+.service__table tr td p {
+    font-size: 16px;
+}
+
+.service__table tr td b {
+    font-size: 16px;
+}
+
+.service__table b {
     font-weight: 500;
 }
 
@@ -2489,17 +2505,25 @@ html {
     font-weight: 500;
 }
 
-.table__td__thirst b {
-    font-weight: 500;
+.service__table tr .table__separation {
+    border-radius: 0px 0px 5px 5px;
+    background: #F7F8FB;
+    padding: 38px;
+    border: none;
 }
 
-.table__td__four b {
-    font-weight: 500;
+.table__separation p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
 }
 
-.table__td__four {
+.table__separation span {
+    color: var(--main-color);
+}
+
+.table__four {
     white-space: nowrap;
-    text-align: end;
 }
 
 @media(max-width: 1700px) {
@@ -2544,6 +2568,67 @@ html {
 }
 
 @media(max-width: 1100px) {
+
+    .service__table tr .table__separation {
+        grid-column: 1/3;
+        padding: 25px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .table__separation p:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .table__invisible {
+        display: none;
+    }
+
+    .service__table tr td {
+        border: none;
+        padding: 25px;
+    }
+
+    .service__table tr {
+        border-bottom: 1px solid #E5E7EB;
+    }
+
+    .service__table thead tr th {
+        display: none;
+    }
+
+    .service__table thead tr {
+        height: 40px;
+        background-color: var(--main-color);
+        border-radius: 6px 6px 0 0;
+    }
+
+    .service__table tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .table__one {
+        grid-row: 1/1;
+        grid-column: 1/3;
+    }
+
+    .table__two {
+        grid-row: 2/2;
+        grid-column: 1/3;
+    }
+
+    .table__three {
+        grid-row: 3/3;
+        grid-column: 1/2;
+    }
+
+    .table__four {
+        grid-row: 3/3;
+        grid-column: 2/4;
+        text-align: end;
+    }
 
     .service__price__top {
         padding-right: 30px;
