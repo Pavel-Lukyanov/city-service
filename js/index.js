@@ -305,16 +305,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    let inputTel = document.querySelector("input[type='tel']");
-    var im = new Inputmask("+7 (999)-999-99-99",
-        {
+    let inputTels = document.querySelectorAll("input[type='tel']");
+
+    inputTels.forEach(input => {
+        var inputMask = new Inputmask("+7 (999)-999-99-99", {
             showMaskOnHover: false,
             alias: 'phone'
-        }
-    );
-    if (inputTel) {
-        im.mask(inputTel);
-    }
+        });
+        inputMask.mask(input);
+    });
+
+
 
     let inputs = document.querySelectorAll('.form__input');
 
@@ -453,4 +454,12 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     }
+
+    let callModalPrices = document.querySelectorAll('.price__card__button');
+
+    callModalPrices.forEach(el => {
+        el.addEventListener('click', () => {
+            el.nextElementSibling.classList.add('popup__opened');
+        })
+    })
 })
