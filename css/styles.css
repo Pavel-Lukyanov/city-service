@@ -2496,6 +2496,30 @@ html {
     padding: 58px 94px 35px;
 }
 
+.about__practice {
+    margin-bottom: 80px;
+}
+
+.title__about__practice {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 72px;
+    margin-bottom: 20px;
+}
+
+.about__swiper__container {
+    max-width: 1372px;
+    margin: auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.about__swiper {
+    overflow: hidden;
+}
+
+
+
 /* .price__popup::-webkit-scrollbar-track {
     background-color: rgb(196, 196, 196);
     border-radius: 5px;
@@ -2835,6 +2859,184 @@ html {
     margin-bottom: 12px;
     padding-left: 20px;
 }
+
+.about__container {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+}
+
+.about__left p {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.about__quote {
+    background-color: var(--main-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.about__quote::before {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url(../img/icons/quotes.svg);
+    background-size: 70px 60px;
+    width: 70px;
+    height: 60px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.about__quote::after {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url(../img/icons/quotes.svg);
+    background-size: 70px 60px;
+    width: 70px;
+    height: 60px;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    transform: rotate(180deg);
+}
+
+.about__quote p {
+    display: flex;
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 50px;
+    max-width: 570px;
+    margin: auto;
+}
+
+.about__quote__ceo {
+    margin-bottom: 70px;
+}
+
+.about__sign {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.about__name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--main-color);
+    margin-bottom: 22px;
+}
+
+.about__sign__span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.about__advantages__title {
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin-bottom: 12px;
+}
+
+.about__advantages__text {
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.about__advantages {
+    margin-bottom: 46px;
+    display: flex;
+    gap: 28px;
+}
+
+.about__deadline::before {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url(../img/icons/deadline.svg);
+    background-size: 60px;
+    width: 60px;
+    height: 60px;
+    content: '';
+    display: block;
+    flex-shrink: 0;
+}
+
+.about__downtime::before {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url(../img/icons/downtime.svg);
+    background-size: 60px;
+    width: 60px;
+    height: 60px;
+    content: '';
+    display: block;
+    flex-shrink: 0;
+}
+
+.about__guarantee::before {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url(../img/icons/guarantee.svg);
+    background-size: 60px;
+    width: 60px;
+    height: 60px;
+    content: '';
+    display: block;
+    flex-shrink: 0;
+}
+
+.about__saving::before {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url(../img/icons/saving.svg);
+    background-size: 60px;
+    width: 60px;
+    height: 60px;
+    content: '';
+    display: block;
+    flex-shrink: 0;
+}
+
+.about__swiper-button-next::after {
+    content: '';
+}
+
+.about__swiper-button-prev::after {
+    content: '';
+}
+
+.about__swiper-button-next {
+    background-image: url(../img/icons/tab_slider_arrow.svg);
+    background-size: 70px;
+    width: 70px;
+    height: 70px;
+}
+
+.about__swiper-button-prev {
+    background-image: url(../img/icons/tab_slider_arrow.svg);
+    background-size: 70px;
+    width: 70px;
+    height: 70px;
+    transform: rotate(180deg);
+}
+
 
 @media(max-width: 1700px) {
     .service__hero::before {
