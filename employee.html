@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цены</title>
+    <meta name="description" content="Сити сервис">
+    <link rel="stylesheet" href="./libs/css/swiper.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./libs/js/swiper.js"></script>
+    <script defer src="./libs/js/fslightbox.js"></script>
+    <script defer src="./libs/js/inputmask.min.js"></script>
+    <script defer src="./js/index.js"></script>
+</head>
+
+<body>
+    <header class="header__container">
+        <div class="container header">
+            <div class="header__top">
+                <button class="header__burger burger__toggle nav-toggle" aria-label="Меню">
+                    <span class="bar-top"></span>
+                    <span class="bar-mid"></span>
+                    <span class="bar-bot"></span>
+                </button>
+                <a class="header__logo__link" href="/" aria-label="Главная страница">
+                    <img class="header__logo" src="./img/icons/logo.svg" alt="Логотип Сити Сервис">
+                </a>
+                <div class="header__info__container">
+                    <div class="header__city__container">
+                        <div class="header__city">
+                            Нижневартовск
+                        </div>
+                        <button class="select__city">
+                            Все города
+                        </button>
+                    </div>
+                    <div class="header__phone__container">
+                        <a class="header__phone" href="tel:+78003022137">
+                            8 800 302 21 37
+                        </a>
+                        <a href="tel:+78003022137" class="header__call">
+                            Заказать звонок
+                        </a>
+                    </div>
+                </div>
+                <a aria-label="Повзонить" href="tel:+78003022137" class="mobile__phone"></a>
+            </div>
+            <nav class="header__nav js-mobile">
+                <ul class="header__list">
+                    <li class="header__item  header__item-dropdown">
+                        <div class="menu__rectangle__container">
+                            <a href="#" class="header__link ">
+                                Клининговые услуги
+                            </a>
+                            <button class="menu__arrow"></button>
+                        </div>
+                        <div class="header__expand">
+                            <div class="header__expand-layout">
+                                <ul class="header__dropdown">
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Мойка окон и фасадов зданий
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Ежедневная уборка
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Комплексная уборка помещений
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Генеральная уборка для бизнеса
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Уборка после ремонта
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Уборка прилегающей территории
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Полировка (натирка) твердых полов
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Роторная чистка твердых полов
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Уборка снега
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Очистка крыш
+                                            от снега и сосулек
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Покос травы
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Чистка эскалаторов и траволаторов
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="./price.html">
+                            Цены
+                        </a>
+                    </li>
+                    <li class="header__item  header__item-dropdown">
+                        <div class="menu__rectangle__container">
+                            <a href="#" class="header__link ">
+                                О компании
+                            </a>
+                            <button class="menu__arrow"></button>
+                        </div>
+                        <div class="header__expand">
+                            <div class="header__expand-layout">
+                                <ul class="header__dropdown">
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Мойка окон и фасадов зданий
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Ежедневная уборка
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item  header__item-dropdown">
+                        <div class="menu__rectangle__container">
+                            <a href="./staff.html" class="header__link ">Подбор персонала</a>
+                            <button class="menu__arrow"></button>
+                        </div>
+                        <div class="header__expand">
+                            <div class="header__expand-layout">
+                                <ul class="header__dropdown">
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Мойка окон и фасадов зданий
+                                        </a>
+                                    </li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
+                                            Ежедневная уборка
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="#">
+                            Акции
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="#">
+                            Интернет-магазин
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="dropdown__menu js-menu-container">
+            <div class="dropdown__menu__overflow">
+                <div class="dropdown__contacts"></div>
+                <div class="mobile__menu"></div>
+                <div class="mobile__background">
+                    <img src="./img/main_banner.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="staff__breadcrubms">
+        <div class="container">
+            <nav class="breadcrumbs__nav">
+                <ul class="breadcrumbs__list">
+                    <li>
+                        <a href="/" title="Главная">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Подбор персонала">
+                            Подбор персонала
+                        </a>
+                    </li>
+                    <li>
+                        <span>
+                            Грузчики
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="container employee__container">
+        <h1 class="title employee__title">
+            Грузчики
+        </h1>
+        <p class="staff__description">
+            Бывают ситуации, когда грузчики нужны на временную работу, и держать их в штате для компании просто не имеет
+            смысла. Или, к примеру, возникла срочная необходимость в погрузочно-разгрузочных работах, а штатный грузчик
+            в отпуске, на больничном и т.п. Обратитесь к нам, мы поможем!
+        </p>
+        <div class="employee__body">
+            <img src="./img/movers.png" alt="Грузчики">
+            <div class="employee__right">
+                <p>
+                    Наши грузчики вежливы, аккуратны, и при этом они настоящие мастера своего дела. Каждый сотрудник
+                    обеспечен необходимыми СИЗ. Кроме того, мы сами составляем и согласовываем с вами график работы
+                    грузчиков, контролируем качество работы, организуем оперативную замену заболевших работников.
+                    Возможны любые формы отчетности.
+                </p>
+                <h2>
+                    КК «Сити Сервис» предоставляет грузчиков по договору аутсорсинга:
+                </h2>
+                <ul>
+                    <li>
+                        вы получаете опытных специалистов по погрузочно-разгрузочным работам;
+                    </li>
+                    <li>
+                        после работ ваши грузы остаются в целости и сохранности;
+                    </li>
+                    <li>
+                        вам не нужно тратить время, чтобы организовывать и контролировать работу грузчиков – мы несем
+                        ответственность за качество их работы.
+                    </li>
+                </ul>
+                <p>
+                    Свяжитесь с нами, укажите, на какой срок требуются грузчики, каков характер грузов и объем работы. Мы
+                    подберем для вас необходимое количество опытных, ответственных грузчиков.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="container feedback__container">
+            <div class="feedback__content">
+                <h2 class="title feedback__title">
+                    Оставьте заявку и мы поможем вам 
+                    <span class="title__span">
+                        подобрать персонал
+                    </span>
+                </h2>
+                <p class="feedback__text">
+                    После получения заявки, менеджер компании обязательно свяжется с Вами для уточнения заказа.
+                </p>
+                <form id="form" class="feedback__form">
+                    <div class="form__inputs">
+                        <div class="form__input__container">
+                            <label class="input__placeholder" for="name_input">
+                                Имя или компания <span>*</span>
+                            </label>
+                            <input id="name_input" class="form__input" name="name" type="text">
+                            <span class="form__error"></span>
+                        </div>
+                        <div class="form__input__container">
+                            <label class="input__placeholder" for="phone_input">
+                                Телефон <span>*</span>
+                            </label>
+                            <input id="phone_input" class="form__input" name="phone" type="tel">
+                            <span class="form__error"></span>
+                        </div>
+                    </div>
+                    <div class="form__input__container">
+                        <label class="input__placeholder" for="what_do">
+                            Что нужно сделать?
+                        </label>
+                        <textarea id="what_do" class="form__textarea form__input" name="what_do"></textarea>
+                    </div>
+                    <div class="form__buttons">
+                        <button class="form__submit" type="submit">
+                            Отправить заявку
+                        </button>
+                        <p class="form__policy">
+                            Нажимая на кнопку вы даете согласие на
+                            <a class="form__policy__link" href="#">
+                                обработку ваших персональных данных
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__advantages">
+            <div class="container">
+                <div class="hero__advantages">
+                    <div class="advantages__item">
+                        <h2 class="title title__advantages experience">
+                            19 ЛЕТ ОПЫТА
+                        </h2>
+                        <p>
+                            успешной работы в сфере клининга
+                        </p>
+                    </div>
+                    <div class="advantages__item">
+                        <h2 class="title title__advantages companys">
+                            300+ КОМПАНИЙ
+                        </h2>
+                        <p>
+                            на ежедневном обслуживании
+                        </p>
+                    </div>
+                    <div class="advantages__item">
+                        <h2 class="title title__advantages cleanings">
+                            800+ КЛИНИНГОВ
+                        </h2>
+                        <p>
+                            с площадью уборки от 1000 до 100 000 м2
+                        </p>
+                    </div>
+                    <div class="advantages__item">
+                        <h2 class="title title__advantages hero__services">
+                            30+ ВИДОВ УСЛУГ
+                        </h2>
+                        <p>
+                            от мытья окон
+                            до уборки цехов
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container footer__top">
+            <div class="footer__address__container">
+                <a class="footer__logo" href="/">
+                    <img src="./img/icons/logo.svg" alt="Логотип Сити Сервис">
+                </a>
+                <span class="footer__text">
+                    Главный офис
+                </span>
+                <address class="footer__address">
+                    г. Сургут, ул. 30 лет Победы, 19, офис 207А
+                </address>
+            </div>
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li>
+                        <a href="#">
+                            Клининговые услуги
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./price.html">
+                            Цены
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            О компании
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./staff.html">
+                            Подбор персонала
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Акции
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Интернет-магазин
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__contacts">
+                <a class="footer__main__phone" href="tel:+78003022137">
+                    8 800 302 21 37
+                </a>
+                <a class="footer__email" href="mailto:info@uborka-hmao.ru">
+                    info@uborka-hmao.ru
+                </a>
+                <span class="footer__city">
+                    Сургут
+                </span>
+                <a class="footer__phone" href="tel:+73462550221">
+                    +7 3462 550 221
+                </a>
+                <span class="footer__city">
+                    Нижневартовск
+                </span>
+                <a class="footer__phone" href="tel:+73462550221">
+                    +7 3462 550 221
+                </a>
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div class="container footer__bottom">
+            <p>
+                2023. Сити Сервис. Все права защищены.
+            </p>
+            <a href="#">
+                Политика обработки персональных данных
+            </a>
+        </div>
+    </footer>
+    <div class="popup" id="backFormPopup">
+        <div class="popup__container">
+            <div class="popup__text">
+            </div>
+            <button class="popup__close" aria-label="Закрыть модальное окно">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.02846 20.0005C0.765 20.0005 0.501545 19.9003 0.301379 19.6986C-0.10046 19.2968 -0.10046 18.6453 0.301379 18.2435L18.2435 0.301379C18.6453 -0.10046 19.2968 -0.10046 19.6986 0.301379C20.1005 0.703217 20.1005 1.3547 19.6986 1.75679L1.75679 19.6986C1.55511 19.899 1.29166 20.0005 1.02846 20.0005Z"
+                        fill="#2C2D36" />
+                    <path
+                        d="M18.9718 20.0005C18.7083 20.0005 18.4451 19.9003 18.2447 19.6986L0.301379 1.75679C-0.10046 1.3547 -0.10046 0.703217 0.301379 0.301379C0.703217 -0.10046 1.3547 -0.10046 1.75679 0.301379L19.6986 18.2435C20.1005 18.6453 20.1005 19.2968 19.6986 19.6986C19.4969 19.899 19.2337 20.0005 18.9718 20.0005Z"
+                        fill="#2C2D36" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="popup" id="selectCity">
+        <div class="popup__container">
+            <div class="popup__text">
+                <h3 class="popup__title">
+                    Выберите город
+                </h3>
+                <ul class="popup__city__list">
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Сургут
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нижневартовск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Нефтеюганск
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Москва
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Рязань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Казань
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Лангепас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Новосибирск
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="popup__close" aria-label="Закрыть модальное окно">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.02846 20.0005C0.765 20.0005 0.501545 19.9003 0.301379 19.6986C-0.10046 19.2968 -0.10046 18.6453 0.301379 18.2435L18.2435 0.301379C18.6453 -0.10046 19.2968 -0.10046 19.6986 0.301379C20.1005 0.703217 20.1005 1.3547 19.6986 1.75679L1.75679 19.6986C1.55511 19.899 1.29166 20.0005 1.02846 20.0005Z"
+                        fill="#2C2D36" />
+                    <path
+                        d="M18.9718 20.0005C18.7083 20.0005 18.4451 19.9003 18.2447 19.6986L0.301379 1.75679C-0.10046 1.3547 -0.10046 0.703217 0.301379 0.301379C0.703217 -0.10046 1.3547 -0.10046 1.75679 0.301379L19.6986 18.2435C20.1005 18.6453 20.1005 19.2968 19.6986 19.6986C19.4969 19.899 19.2337 20.0005 18.9718 20.0005Z"
+                        fill="#2C2D36" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="fixed__menu">
+        <ul class="fixed__menu__list">
+            <li>
+                <button class="fixed__menu__item fixed__burger burger__toggle nav-toggle" aria-label="Меню">
+                    <span>
+                        <span class="bar-top"></span>
+                        <span class="bar-mid"></span>
+                        <span class="bar-bot"></span>
+                    </span>
+                    Меню
+                </button>
+            </li>
+            <li>
+                <a class="fixed__menu__item fixed__phone" href="tel:+78003022137">
+                    Позвонить
+                </a>
+            </li>
+            <li>
+                <a class="fixed__menu__item fixed__message" href="tel:+78003022137">
+                    Написать
+                </a>
+            </li>
+            <li>
+                <a class="fixed__menu__item fixed__top" href="#">
+                    Наверх
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
