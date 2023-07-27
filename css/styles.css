@@ -1703,6 +1703,14 @@ html {
     width: fit-content;
 }
 
+.about__show {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
 .about__show span {
     display: block;
     width: fit-content;
@@ -1710,14 +1718,6 @@ html {
     font-weight: 500;
     color: var(--main-color);
     border-bottom: dashed 1px var(--main-color);
-}
-
-.about__show {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    gap: 10px;
-    margin-bottom: 50px;
 }
 
 .about__show::after {
@@ -2764,6 +2764,10 @@ html {
     margin-bottom: 18px;
 }
 
+.about__swiper-pagination {
+    display: none;
+}
+
 .staff__item__title {
     text-align: center;
     font-size: 18px;
@@ -2863,6 +2867,7 @@ html {
 .about__container {
     display: grid;
     grid-template-columns: 1fr 0.3fr;
+    gap: 140px;
 }
 
 .about__left p {
@@ -2966,52 +2971,31 @@ html {
     gap: 28px;
 }
 
-.about__deadline::before {
+.about__advantages::before {
     background-color: transparent;
     background-repeat: no-repeat;
-    background-image: url(../img/icons/deadline.svg);
     background-size: 60px;
     width: 60px;
     height: 60px;
     content: '';
     display: block;
     flex-shrink: 0;
+}
+
+.about__deadline::before {
+    background-image: url(../img/icons/deadline.svg);
 }
 
 .about__downtime::before {
-    background-color: transparent;
-    background-repeat: no-repeat;
     background-image: url(../img/icons/downtime.svg);
-    background-size: 60px;
-    width: 60px;
-    height: 60px;
-    content: '';
-    display: block;
-    flex-shrink: 0;
 }
 
 .about__guarantee::before {
-    background-color: transparent;
-    background-repeat: no-repeat;
     background-image: url(../img/icons/guarantee.svg);
-    background-size: 60px;
-    width: 60px;
-    height: 60px;
-    content: '';
-    display: block;
-    flex-shrink: 0;
 }
 
 .about__saving::before {
-    background-color: transparent;
-    background-repeat: no-repeat;
     background-image: url(../img/icons/saving.svg);
-    background-size: 60px;
-    width: 60px;
-    height: 60px;
-    content: '';
-    display: block;
-    flex-shrink: 0;
 }
 
 .about__swiper-button-next::after {
@@ -3023,20 +3007,91 @@ html {
 }
 
 .about__swiper-button-next {
-    background-image: url(../img/icons/tab_slider_arrow.svg);
-    background-size: 70px;
-    width: 70px;
-    height: 70px;
-}
-
-.about__swiper-button-prev {
-    background-image: url(../img/icons/tab_slider_arrow.svg);
+    background-image: url(../img/icons/swiper_arrow_white.svg);
     background-size: 70px;
     width: 70px;
     height: 70px;
     transform: rotate(180deg);
 }
 
+.about__swiper-button-prev {
+    background-image: url(../img/icons/swiper_arrow_white.svg);
+    background-size: 70px;
+    width: 70px;
+    height: 70px;
+}
+
+.about__licence__container {
+    padding-bottom: 160px;
+}
+
+.right__aside {
+    background-color: var(--sectionColor);
+    border-radius: 4px;
+    padding: 39px 29px 33px 50px;
+    height: fit-content;
+}
+
+.right__nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.right__nav ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--black);
+    transition: 0.3s;
+}
+
+.right__nav ul li a.active {
+    color: var(--gray6B);
+}
+
+.right__nav ul li a:hover {
+    color: var(--hover);
+}
+
+.show__desktop {
+    display: block;
+    max-height: fit-content;
+    visibility: visible;
+    opacity: 1;
+}
+
+.show__mobile {
+    display: none;
+    margin-bottom: 0;
+}
+
+.about__deadline {
+    margin-bottom: 30px;
+}
+
+.show__mobile span {
+    color: #4B5563;
+    border-bottom: dashed 1px #4B5563;
+}
+
+.show__mobile::after {
+    background-image: url(../img/icons/menu-arrow-gray.svg);
+}
+
+.about__licence__container .reviews__swiper-button-next {
+    border: none;
+}
+
+.about__licence__container .reviews__swiper-button-prev {
+    border: none;
+}
+
+.about__swiper img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
 
 @media(max-width: 1700px) {
     .service__hero::before {
@@ -3080,6 +3135,20 @@ html {
 }
 
 @media(max-width: 1100px) {
+
+    .about__swiper-pagination {
+        display: block;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+
+    .right__aside {
+        display: none;
+    }
+
+    .about__container {
+        grid-template-columns: 1fr;
+    }
 
     .employee__body {
         gap: 50px;
@@ -3642,6 +3711,56 @@ html {
 
 @media(max-width: 768px) {
 
+    .about__sign {
+        margin-top: 16px;
+    }
+
+    .about__swiper img {
+        height: 200px;
+    }
+
+    .about__quote::before {
+        background-size: 35px 30px;
+        width: 35px;
+        height: 30px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .about__quote::after {
+        background-size: 35px 30px;
+        width: 35px;
+        height: 30px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .about__title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about__quote__ceo p {
+        margin-bottom: 30px;
+    }
+
+    .show__desktop {
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .show__mobile {
+        display: flex;
+    }
+
+    .about__quote p {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 33px;
+        margin-bottom: 0;
+        padding: 0 60px;
+    }
 
     .price__card__title {
         line-height: 19px;
@@ -3952,6 +4071,23 @@ html {
 }
 
 @media(max-width: 600px) {
+
+    .about__advantages::before {
+        background-size: 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .about__advantages {
+        gap: 20px;
+    }
+
+    .about__advantages__title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        margin-bottom: 12px;
+    }
 
     .employee__container {
         padding-bottom: 150px;
@@ -4367,6 +4503,11 @@ html {
 }
 
 @media(max-width: 374px) {
+    .about__quote p {
+        padding: 0 15px;
+        text-align: center;
+    }
+
     .reviews__item {
         padding: 15px;
     }

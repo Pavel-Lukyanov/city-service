@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let burgerMenus = document.querySelectorAll('.burger__toggle');
@@ -14,30 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     }
-
-    if (window.outerWidth <= 1100) {
-        let headerContacts = document.querySelector('.header__info__container');
-        let menuContactsContainr = document.querySelector('.dropdown__contacts');
-        menuContactsContainr.innerHTML = headerContacts.innerHTML;
-        headerContacts.remove();
-
-        let mainMenu = document.querySelector('.js-mobile');
-        let mobileMenuContainer = document.querySelector('.mobile__menu');
-
-        mobileMenuContainer.innerHTML = mainMenu.innerHTML;
-        mainMenu.remove();
-
-
-        let btnsShowMenu = document.querySelectorAll('.menu__rectangle__container');
-
-        btnsShowMenu.forEach(el => {
-            el.addEventListener('click', function (e) {
-                e.preventDefault();
-                el.closest('.header__item-dropdown').classList.toggle('active');
-            })
-        })
-    }
-
 
     if (document.querySelector('.tab__slide__container')) {
         const cleanSwiper = new Swiper('.tab__slide__container', {
@@ -73,6 +50,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.classList.remove('active');
             });
         }
+    }
+
+    if (window.innerWidth <= 1100) {
+        let headerContacts = document.querySelector('.header__info__container');
+        let menuContactsContainr = document.querySelector('.dropdown__contacts');
+        menuContactsContainr.innerHTML = headerContacts.innerHTML;
+        headerContacts.remove();
+
+        let mainMenu = document.querySelector('.js-mobile');
+        let mobileMenuContainer = document.querySelector('.mobile__menu');
+
+        mobileMenuContainer.innerHTML = mainMenu.innerHTML;
+        mainMenu.remove();
+
+
+        let btnsShowMenu = document.querySelectorAll('.menu__rectangle__container');
+
+        btnsShowMenu.forEach(el => {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                el.closest('.header__item-dropdown').classList.toggle('active');
+            })
+        })
     }
 
 
@@ -301,28 +301,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.about__swiper-button-next',
                 prevEl: '.about__swiper-button-prev',
             },
+            pagination: {
+                el: '.about__swiper-pagination',
+                clickable: true,
+            },
             breakpoints: {
                 320: {
-                    slidesPerView: 1,
-                    spaceBetween: 40
+                    slidesPerView: 1.15,
+                    spaceBetween: 30
                 },
-                370: {
+                375: {
+                    slidesPerView: 1.35,
+                    spaceBetween: 30
+                },
+                420: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30
+                },
+                520: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 30
+                },
+                620: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 30
+                },
+                690: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 30
+                },
+                769: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 30
+                },
+                860: {
                     slidesPerView: 2,
-                    spaceBetween: 40
+                    spaceBetween: 30
                 },
-                475: {
-                    slidesPerView: 2,
-                    spaceBetween: 40
-                },
-                630: {
-                    slidesPerView: 2,
-                    spaceBetween: 40
-                },
-                850: {
-                    slidesPerView: 3.5,
-                    spaceBetween: 40
+                980: {
+                    slidesPerView: 2.3,
+                    spaceBetween: 30
                 },
                 1100: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 30
+                },
+                1300: {
                     slidesPerView: 3,
                     spaceBetween: 30,
                 }
@@ -330,15 +354,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    let aboutShowMore = document.querySelector('.about__show');
-    if (aboutShowMore) {
-        let aboutInvisibleContent = document.querySelector('.about__invisible');
-        let textBtn = aboutShowMore.querySelector('span');
+    let aboutShowMore = document.querySelectorAll('.about__show');
+    if (aboutShowMore.length > 0) {
+        aboutShowMore.forEach(el => {
+            el.addEventListener('click', () => {
+                let textBtn = el.querySelector('span');
 
-        aboutShowMore.addEventListener('click', () => {
-            (textBtn.textContent.trim() === 'Показать подробности') ? textBtn.innerHTML = 'Скрыть' : textBtn.textContent = 'Показать подробности';
-            aboutInvisibleContent.classList.toggle('active');
-            aboutShowMore.classList.toggle('active');
+                if (textBtn.textContent.trim() === 'Показать подробности') {
+                    textBtn.innerHTML = 'Скрыть'
+                } else if (textBtn.textContent.trim() === 'Скрыть') {
+                    textBtn.textContent = 'Показать подробности';
+                }
+
+                if (textBtn.textContent.trim() === 'Раскрыть текст') {
+                    textBtn.innerHTML = 'Скрыть текст'
+                } else if (textBtn.textContent.trim() === 'Скрыть текст') {
+                    textBtn.textContent = 'Раскрыть текст';
+                }
+
+                el.previousElementSibling.classList.toggle('active');
+                el.classList.toggle('active');
+            })
         })
     }
 
