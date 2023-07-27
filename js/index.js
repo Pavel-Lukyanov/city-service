@@ -483,20 +483,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     .then(result => {
                         if (result != 'error') {
                             backFormPopup.classList.add('popup__opened');
-                            backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message">Ваша заявка принята!<br><br>Мы свяжемся с вами в ближайшее время.</div>';
+                            requestCallPopup.classList.remove('popup__opened');
+                            backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message"><div class="popup__color">Спасибо!</div>Мы скоро свяжемся с вами</div>';
                             inputs.forEach(el => {
                                 el.value = '';
                             });
                         }
                     })
                     .catch((err) => {
-                        backFormPopup.classList.add('popup__opened')
-                        backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message">Что-то пошло не так!<br><br>Попробуйте снова.</div>';
+                        backFormPopup.classList.add('popup__opened');
+                        requestCallPopup.classList.remove('popup__opened');
+                        backFormPopup.querySelector('.popup__text').innerHTML = '<div class="popup__message"><div class="popup__color">Что-то пошло не так!</div>Попробуйте снова</div>';
                     });
             }
         });
     });
 
+    let requestCallBtn = document.querySelector('.header__call');
+    let requestCallPopup = document.getElementById('requestCall');
+
+    requestCallBtn.addEventListener('click', () => {
+        requestCallPopup.classList.add('popup__opened');
+    })
 
 
     let callModalCity = document.querySelector('.select__city');
