@@ -543,4 +543,27 @@ document.addEventListener('DOMContentLoaded', () => {
             el.nextElementSibling.classList.add('popup__opened');
         })
     })
+
+
+    let equpmentCardItem = document.querySelectorAll('.equipment__item');
+
+    if (equpmentCardItem.length > 0) {
+
+        let equipmentCloseBtns = document.querySelectorAll('.equipment__close');
+        equipmentCloseBtns.forEach(el =>{
+            el.addEventListener('click', ()=>{
+                el.closest('.equipment__item__contaner').classList.remove('active');
+            })
+        })
+
+        equpmentCardItem.forEach(el => {
+            el.addEventListener('click', () => {
+                equpmentCardItem.forEach(el => {
+                    el.closest('.equipment__item__contaner').classList.remove('active');
+                })
+                el.closest('.equipment__item__contaner').classList.add('active');
+            })
+        })
+    }
+
 })
