@@ -3517,6 +3517,10 @@ html {
 }
 
 @media(max-width: 1100px) {
+
+    .accordeon__head {
+        cursor: default;
+    }
     
     .header__link {
         cursor: default;
