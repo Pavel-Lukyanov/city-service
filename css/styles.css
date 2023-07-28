@@ -3465,6 +3465,9 @@ html {
     border-radius: 4px;
     border: 1px solid #E5E7EB;
     margin-bottom: 17px;
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .store__item h3 {
@@ -3517,6 +3520,14 @@ html {
 }
 
 @media(max-width: 1100px) {
+
+    .store__container {
+        flex-direction: column-reverse;
+    }
+
+    .store__img {
+        margin: auto;
+    }
 
     .equipment__container {
         grid-template-columns: 1fr;
@@ -4026,9 +4037,21 @@ html {
         width: 100%;
         object-fit: contain;
     }
+
+    .store__left p {
+        padding-right: 0;
+    }
+
+    .store__left__list {
+        padding-right: 0;
+    }
 }
 
 @media(max-width: 1000px) {
+
+    .store__order {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     .staff__container {
         grid-template-columns: 1fr 1fr;
@@ -4102,6 +4125,37 @@ html {
 }
 
 @media(max-width: 768px) {
+
+    .store__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .store__bottom__list {
+        grid-template-columns: 1fr;
+    }
+
+    .store__order {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .store__link {
+        font-size: 30px;
+        line-height: 34px;
+        padding: 4px 17px;
+    }
+
+    .store__bottom__list {
+        margin-bottom: 20px;
+    }
+
+    .store__description {
+        margin-bottom: 0;
+    }
+
+    .store__left__list {
+        margin-top: 20px;
+    }
 
     .equipment__modal {
         position: fixed;
@@ -4510,6 +4564,31 @@ html {
 }
 
 @media(max-width: 600px) {
+
+    .store__img {
+        max-height: 275px;
+    }
+
+    .store__order {
+        column-gap: 15px;
+        row-gap: 26px;
+    }
+
+    .store__order__title {
+        font-size: 24px;
+        margin-bottom: 22px;
+    }
+
+    .store__item img {
+        height: 143px;
+        margin-bottom: 10px;
+    }
+
+    .store__item h3 {
+        font-size: 16px;
+        padding-right: 0;
+        padding-left: 0;
+    }
 
     .equipment__dropdown {
         padding: 40px 25px;
@@ -4988,6 +5067,11 @@ html {
 }
 
 @media(max-width: 374px) {
+
+    .store__item h3 {
+        word-break: break-all;
+    }
+
     .about__quote p {
         padding: 0 15px;
         text-align: center;
