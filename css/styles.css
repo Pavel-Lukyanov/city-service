@@ -295,7 +295,7 @@ html {
     visibility: hidden;
     transition: 0.3s;
     border-top: 1px solid var(--gray);
-    z-index: 2;
+    z-index: 3;
 }
 
 .dropdown__menu__overflow {
