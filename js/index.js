@@ -547,11 +547,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let equpmentCardItem = document.querySelectorAll('.equipment__item');
 
+
     if (equpmentCardItem.length > 0) {
 
+        let equipmentModals = document.querySelectorAll('.equipment__item__contaner');
+
+        if (window.innerWidth <= 768) {
+            equipmentModals.forEach(el => {
+                el.addEventListener('click', function (e) {
+                    if (e.target.classList.contains('equipment__modal')) {
+                        el.closest('.equipment__item__contaner').classList.remove('active');
+                    }
+                })
+            })
+        }
+
         let equipmentCloseBtns = document.querySelectorAll('.equipment__close');
-        equipmentCloseBtns.forEach(el =>{
-            el.addEventListener('click', ()=>{
+        equipmentCloseBtns.forEach(el => {
+            el.addEventListener('click', () => {
                 el.closest('.equipment__item__contaner').classList.remove('active');
             })
         })
