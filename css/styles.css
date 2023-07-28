@@ -4075,8 +4075,6 @@ html {
         height: 100%;
         width: 100%;
         max-width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
         font-size: 16px;
         background: rgba(44, 45, 54, 0.5);
         z-index: 2;
@@ -4086,8 +4084,8 @@ html {
     .equipment__dropdown {
         top: 0;
         bottom: 0;
-        right: 0;
-        left: 0;
+        right: 15px;
+        left: 15px;
         max-width: 420px;
         height: fit-content;
         box-sizing: border-box;
@@ -4475,6 +4473,23 @@ html {
 }
 
 @media(max-width: 600px) {
+
+    .equipment__dropdown {
+        padding: 40px 25px;
+    }
+
+    .equipment__close {
+        top: 15px;
+        right: 15px;
+    }
+
+    .equipment__dropdown__title {
+        font-size: 16px;
+    }
+
+    .equipment__item__text p {
+        font-size: 16px;
+    }
 
     .equipment__item__title {
         font-size: 16px;
