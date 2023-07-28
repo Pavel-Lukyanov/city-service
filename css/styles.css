@@ -4063,24 +4063,22 @@ html {
 
 @media(max-width: 768px) {
 
-    /*  .equipment__item__contaner.active .equipment__dropdown:nth-child(1n) {
-        transform: translate(0%, 0%);
-    }
-
-    .equipment__item__contaner.active .equipment__dropdown:nth-child(2n) {
-        transform: translate(0%, 0%);
-    } */
-
     .equipment__dropdown {
-        top: 50%;
-        transform: translate(0%, 0%);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: fit-content;
         padding: 24px 15px 30px;
+        box-sizing: border-box;
+        transform: translate(0%, 0%);
+        font-size: 16px;
     }
 
     .equipment__item__contaner.active .equipment__dropdown {
         transform: translate(0%, 0%);
-        left: 0;
-        right: 0;
     }
 
     .equipment__cards {
@@ -4459,6 +4457,12 @@ html {
 }
 
 @media(max-width: 600px) {
+
+    .equipment__item__title {
+        font-size: 16px;
+        padding-right: 0;
+        padding-left: 0;
+    }
 
     .stocks__item img {
         padding: 13px;
