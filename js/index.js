@@ -538,11 +538,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let callModalPrices = document.querySelectorAll('.price__card__button');
 
-    callModalPrices.forEach(el => {
-        el.addEventListener('click', () => {
-            el.nextElementSibling.classList.add('popup__opened');
+    if (callModalPrices.length > 0) {
+
+        let pricePopupContent = document.getElementById('pricePopupContent');
+
+        callModalPrices.forEach(el => {
+            el.addEventListener('click', () => {
+                pricePopupContent.innerHTML = el.nextElementSibling.innerHTML;
+                pricePopupContent.closest('.popup').classList.add('popup__opened');
+            })
         })
-    })
+    }
 
 
     let equpmentCardItem = document.querySelectorAll('.equipment__item');
