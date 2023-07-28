@@ -3471,11 +3471,16 @@ html {
 }
 
 .store__item h3 {
-    color: var(--main-color);
+    transition: 0.3s;
+    color: var(--black);
     font-size: 18px;
     font-weight: 600;
     line-height: 130%;
     text-align: center;
+}
+
+.store__item:hover h3 {
+    color: var(--hover);
 }
 
 @media(max-width: 1700px) {
