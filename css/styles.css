@@ -1114,27 +1114,33 @@ html {
 }
 
 .tab__swiper-button-next {
-    background-image: url(../img/icons/tab_slider_arrow.svg);
     background-size: 70px;
     width: 70px;
     height: 70px;
     transition: 0.3s;
 }
 
-.tab__swiper-button-next:hover {
-    background-image: url(../img/icons/tab_slider_hover.svg);
+.tab__swiper-button-next svg path {
+    transition: 0.3s;
+}
+
+.tab__swiper-button-next:hover svg path {
+    fill: #6339F5;
 }
 
 .tab__swiper-button-prev {
-    background-image: url(../img/icons/tab_slider_arrow.svg);
     background-size: 70px;
     width: 70px;
     height: 70px;
     transform: rotate(180deg);
 }
 
-.tab__swiper-button-prev:hover {
-    background-image: url(../img/icons/tab_slider_hover.svg);
+.tab__swiper-button-prev svg path {
+    transition: 0.3s;
+}
+
+.tab__swiper-button-prev:hover svg path {
+    fill: #6339F5;
 }
 
 .equipment__head {
@@ -1373,7 +1379,6 @@ html {
 .technique__swiper__container .swiper-button-next {
     background-color: transparent;
     background-repeat: no-repeat;
-    background-image: url(../img/icons/swiper_arrow_white.svg);
     background-size: 70px;
     width: 70px;
     height: 70px;
@@ -1383,14 +1388,9 @@ html {
     border-radius: 50%;
 }
 
-.technique__swiper__container .swiper-button-next:hover {
-    background-image: url(../img/icons/swiper_arrow_hover.svg);
-}
-
 .technique__swiper__container .swiper-button-prev {
     background-color: transparent;
     background-repeat: no-repeat;
-    background-image: url(../img/icons/swiper_arrow_white.svg);
     background-size: 70px;
     width: 70px;
     height: 70px;
@@ -1399,8 +1399,20 @@ html {
     border-radius: 50%;
 }
 
-.technique__swiper__container .swiper-button-prev:hover {
-    background-image: url(../img/icons/swiper_arrow_hover.svg);
+.swiper-button-prev svg path {
+    transition: 0.3s;
+}
+
+.swiper-button-prev:hover svg path {
+    fill: var(--main-color);
+}
+
+.swiper-button-next svg path {
+    transition: 0.3s;
+}
+
+.swiper-button-next:hover svg path {
+    fill: var(--main-color);
 }
 
 .swiper-lazy-preloader {
@@ -3092,7 +3104,7 @@ html {
     transition: 0.3s;
 }
 
-.about__swiper-button-prev :hover {
+.about__swiper-button-prev:hover {
     background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
@@ -3548,7 +3560,7 @@ html {
     .accordeon__head {
         cursor: default;
     }
-    
+
     .header__link {
         cursor: default;
     }
