@@ -1118,6 +1118,11 @@ html {
     background-size: 70px;
     width: 70px;
     height: 70px;
+    transition: 0.3s;
+}
+
+.tab__swiper-button-next:hover {
+    background-image: url(../img/icons/tab_slider_hover.svg);
 }
 
 .tab__swiper-button-prev {
@@ -1126,6 +1131,10 @@ html {
     width: 70px;
     height: 70px;
     transform: rotate(180deg);
+}
+
+.tab__swiper-button-prev:hover {
+    background-image: url(../img/icons/tab_slider_hover.svg);
 }
 
 .equipment__head {
@@ -1370,10 +1379,12 @@ html {
     height: 70px;
     transform: rotate(180deg);
     transition: 0.3s;
+    border: 1px solid #EAEBF2;
+    border-radius: 50%;
 }
 
 .technique__swiper__container .swiper-button-next:hover {
-    opacity: 0.8;
+    background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
 .technique__swiper__container .swiper-button-prev {
@@ -1384,10 +1395,12 @@ html {
     width: 70px;
     height: 70px;
     transition: 0.3s;
+    border: 1px solid #EAEBF2;
+    border-radius: 50%;
 }
 
 .technique__swiper__container .swiper-button-prev:hover {
-    opacity: 0.8;
+    background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
 .swiper-lazy-preloader {
@@ -1467,7 +1480,7 @@ html {
 }
 
 .reviews__swiper-button-next:hover {
-    opacity: 0.8;
+    background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
 .reviews__swiper-button-prev {
@@ -1483,7 +1496,7 @@ html {
 }
 
 .reviews__swiper-button-prev:hover {
-    opacity: 0.8;
+    background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
 .reviews__item {
@@ -1601,7 +1614,7 @@ html {
 }
 
 .parners__swiper-button-next:hover {
-    opacity: 0.8;
+    background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
 .parners__swiper-button-prev {
@@ -1615,7 +1628,7 @@ html {
 }
 
 .parners__swiper-button-prev:hover {
-    opacity: 0.8;
+    background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
 .about {
@@ -3060,6 +3073,13 @@ html {
     width: 70px;
     height: 70px;
     transform: rotate(180deg);
+    border: 1px solid #EAEBF2;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.about__swiper-button-next:hover {
+    background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
 .about__swiper-button-prev {
@@ -3067,6 +3087,13 @@ html {
     background-size: 70px;
     width: 70px;
     height: 70px;
+    border: 1px solid #EAEBF2;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.about__swiper-button-prev :hover {
+    background-image: url(../img/icons/swiper_arrow_hover.svg);
 }
 
 .about__licence__container {
@@ -3128,11 +3155,11 @@ html {
 }
 
 .about__licence__container .reviews__swiper-button-next {
-    border: none;
+    border: 1px solid #EAEBF2;
 }
 
 .about__licence__container .reviews__swiper-button-prev {
-    border: none;
+    border: 1px solid #EAEBF2;
 }
 
 .about__swiper img {
